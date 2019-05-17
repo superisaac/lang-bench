@@ -17,8 +17,8 @@ else
 fi
 
 if [ -n $(which go) ]; then
-    echo go build nprime.go -o build/nprime-go
-    go build nprime.go -o build/nprime-go
+    echo go build -o build/nprime-go nprime.go
+    go build -o build/nprime-go nprime.go
 else
     echo please install go
 fi

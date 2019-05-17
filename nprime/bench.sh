@@ -5,7 +5,7 @@ if [ -z $n ]; then
     n=10000
 fi
 
-echo print the No. $n prime
+echo print the NO. $n prime
 
 if [ -x build/nprime-c++-O3 ]; then
     echo run g++
@@ -42,10 +42,12 @@ if [ -n $(which java) ]; then
     echo
 fi
 
-echo run rust
-echo build/nprime-rust $n
-time build/nprime-rust $n
-echo
+if [ -x build/nprime-rust ]; then
+    echo run rust
+    echo build/nprime-rust $n
+    time build/nprime-rust $n
+    echo
+fi
 
 if [ -n $(which node) ]; then
     echo run javascript
@@ -61,7 +63,10 @@ if [ -n $(which dart) ]; then
     echo
 fi
 
-echo run python
-echo python nprime.py $n
-time python nprime.py $n
+if [ -n $(which python) ]; then
+    # almost impossible to miss a python installation
+    echo run python
+    echo python nprime.py $n
+    time python nprime.py $n
+fi
 
