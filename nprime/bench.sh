@@ -63,7 +63,7 @@ if [ -n $(which dart) ]; then
     echo
 fi
 
-if [ -n $(which python) ]; then
+if [ -n $(which python) ] && [ $n -lt 5000 ]; then
     # almost impossible to miss a python installation
     echo run python
     echo python nprime.py $n

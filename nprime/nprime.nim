@@ -5,14 +5,14 @@ if number <= 1:
   echo 2
   quit 0
 
-var prime_count = 1
-var last_prime = 2
-for n in countup(3, 1000000000, 2):
-#var n = 3
-#while true:
+var prime_count:int32 = 1
+var last_prime:int32 = 2
+#for n in countup(3, 1000000000, 2):
+var n:int32 = 3
+while true:
   var is_prime = true
   #for d in countup(3, last_prime, 2):
-  var d = 3
+  var d:int32 = 3
   while true:
     if d >= last_prime:
       break
@@ -28,5 +28,5 @@ for n in countup(3, 1000000000, 2):
     if prime_count >= number:
       echo last_prime
       quit 0
-  #n += 2
+  n += 2
 

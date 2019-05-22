@@ -26,6 +26,7 @@ fi
 if [ -n $(which nim ) ]; then
     echo nim c -x:off --opt:speed -d:release nprime.nim
     nim c -x:off --opt:speed -d:release nprime.nim
+    mv nprime build/nprime-nim
 else
     echo please install nim
 fi

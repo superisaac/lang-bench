@@ -11,14 +11,16 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	number := int(v)
+	number := int32(v)
 
-	last_prime := 2
-	prime_count := 1
+	var last_prime int32 = 2
+	var prime_count int32 = 1
 
-	for n :=3;; n+=2 {
+	var n int32
+	var d int32
+	for n =3;; n+=2 {
 		is_prime := true
-		for d := 3; d<=last_prime; d+=2 {
+		for d = 3; d<=last_prime; d+=2 {
 			if n % d == 0 {
 				is_prime = false
 				break

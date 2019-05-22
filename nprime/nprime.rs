@@ -11,11 +11,11 @@ fn main() {
 fn calc_nprime(number: i32) {
     let mut last_prime = 2;
     let mut prime_count = 1;
-    let mut n=3;
+    let mut n:i32=3;
 
     loop {
         let mut is_prime = true;
-        let mut d = 3;
+        let mut d: i32 = 3;
         //for(d=3;d<=last_prime;d+=2) {
         loop {
             if d > last_prime {
