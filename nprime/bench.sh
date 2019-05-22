@@ -42,6 +42,15 @@ if [ -n $(which java) ]; then
     echo
 fi
 
+if [ -n $(which scala) ]; then
+    echo run scala
+    echo scala nprime.scala $n
+    time scala nprime.scala $n
+    echo
+else
+    echo please install scala
+fi
+
 if [ -x build/nprime-rust ]; then
     echo run rust
     echo build/nprime-rust $n
