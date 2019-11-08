@@ -42,14 +42,14 @@ if [ -n $(which java) ]; then
     echo
 fi
 
-if [ -n $(which scala) ]; then
-    echo run scala
-    echo scala nprime.scala $n
-    time scala nprime.scala $n
-    echo
-else
-    echo please install scala
-fi
+# if [ -n $(which scala) ]; then
+#     echo run scala
+#     echo scala nprime.scala $n
+#     time scala nprime.scala $n
+#     echo
+# else
+#     echo please install scala
+# fi
 
 if [ -x build/nprime-rust ]; then
     echo run rust
@@ -69,6 +69,13 @@ if [ -n $(which dart) ]; then
     echo run dart
     echo dart nprime.dart $n    
     time dart nprime.dart $n
+    echo
+fi
+
+if [ -x build/nprime-dartnative ]; then
+    echo run dartnative
+    echo build/nprime-dartnative $n
+    time build/nprime-dartnative $n
     echo
 fi
 

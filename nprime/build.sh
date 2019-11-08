@@ -31,6 +31,13 @@ else
     echo please install nim
 fi
 
+if [ -n $(which dart2native) ]; then
+    echo dart2native nprime.dart -o build/nprime-dartnative
+    dart2native nprime.dart -o build/nprime-dartnative
+else
+    echo please install dart2native
+fi
+
 if [ -n $(which javac) ]; then
     echo javac -d build nprime.java
     javac -d build nprime.java
